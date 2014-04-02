@@ -26,8 +26,10 @@
 #define chdir _chdir
 #define getcwd _getcwd 
 
+#if _MSC_VER < 1800
 #ifndef va_copy
 #define va_copy(a, b) (a) = (b)
+#endif
 #endif
 
 #if !defined restrict
